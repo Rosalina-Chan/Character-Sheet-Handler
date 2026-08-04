@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { getdata } from "$lib/remote.svelte";
-	import TermNameIcon from "~icons/wordpress/term-name";
-	import StatsIcon from "~icons/gridicons/stats";
-	import ShieldIcon from "~icons/material-symbols/shield";
-	import PersonIcon from "~icons/material-symbols/person";
 	import CharacterList from "./CharacterList.svelte";
+
+	let sharedIsClosed = $state(true);
+	let ownedIsClosed = $state(true);
 </script>
 
 <h1>Welcome to Your Characters!</h1>
@@ -16,11 +15,13 @@
 	characters={Object.values(getdata().characters)
 		.filter((a) => a.owner === getdata().user)
 		.toSorted((a, b) => b.lastAccessed - a.lastAccessed)
-		.slice(0, 3)}
+		.slice(0, ownedIsClosed ? 3 : Infinity)}
 />
-
-<h3><a href="characters">See All Characters</a></h3>
-
+<div class="show-more-container">
+	<button onclick={() => (ownedIsClosed = !ownedIsClosed)} class="show-more-btn"
+		>Show {ownedIsClosed ? "more" : "less"}!
+	</button>
+</div>
 <hr />
 
 <h2>List of Characters Shared with You!</h2>
@@ -28,7 +29,25 @@
 	characters={Object.values(getdata().characters)
 		.filter((a) => a.owner !== getdata().user)
 		.toSorted((a, b) => b.lastAccessed - a.lastAccessed)
-		.slice(0, 3)}
+		.slice(0, sharedIsClosed ? 3 : Infinity)}
 />
 
-<h3><a href="characters">See All Characters</a></h3>
+<button onclick={() => (sharedIsClosed = !sharedIsClosed)}
+	>Show {sharedIsClosed ? "more" : "less"}!</button
+>
+
+<style>
+	.show-more-btn {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.show-more-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>

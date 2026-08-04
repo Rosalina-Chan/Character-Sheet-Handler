@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { slide } from "svelte/transition";
 	import TermNameIcon from "~icons/wordpress/term-name";
 	import StatsIcon from "~icons/gridicons/stats";
 	import ShieldIcon from "~icons/material-symbols/shield";
@@ -8,7 +9,7 @@
 
 <div class="char-list-container main-content">
 	{#each characters as character}
-		<div class="char-list-div">
+		<div class="char-list-div" transition:slide>
 			<div class="avatar" style="background-image: url('{character.avatarImg}')"></div>
 			<div class="char-data"><TermNameIcon height="0.8em" width="0.8em" /> {character.name}</div>
 			<div class="char-data"><ShieldIcon height="0.8em" width="0.8em" /> {character.class}</div>
