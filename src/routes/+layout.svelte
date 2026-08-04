@@ -20,6 +20,8 @@
 <style>
 	.main-content {
 		max-width: 1200px;
+		padding-left: 10px;
+		padding-right: 10px;
 		margin-left: auto;
 		margin-right: auto;
 	}
