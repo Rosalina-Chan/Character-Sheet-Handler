@@ -11,9 +11,11 @@
 
 {#if character === undefined}
 	<Warning
-		errorTitle="Nothing to see here"
-		errorMessage="Really, nothing here bub"
+		errorTitle="Invalid Character ID"
+		errorMessage="You've typed an invalid Character ID in, please double check the link you were sent!"
 		errorLink="/characters"
+		errorLinkText="Return"
+		severeness="0"
 	/>
 {:else}
 	{character.name}
