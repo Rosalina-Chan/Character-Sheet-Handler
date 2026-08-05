@@ -1,5 +1,30 @@
+:root {
+	--navbar-colour: #27232f;
+	--navbar-hover-colour: #423d4d;
+	--navbar-text-colour: #ccc4ce;
+	--navbar-text-hover-colour: #f4e4f8;
+
+	--btn-text-colour: #ccc4ce;
+	--btn-background-colour: #27232f;
+	--btn-border-colour: #423d4d;
+
+	--char-link-colour: #3a0d94;
+}
+
 body {
 	width: 100vw;
 	max-width: 100vw;
 	overflow-x: hidden;
+}
+
+hr {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+h1 {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+h2 {
+	margin-bottom: 20px;
 }

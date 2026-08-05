@@ -4,18 +4,30 @@
 	import StatsIcon from "~icons/gridicons/stats";
 	import ShieldIcon from "~icons/material-symbols/shield";
 	import PersonIcon from "~icons/material-symbols/person";
-	let { characters } = $props();
+	import type { CharacterData } from "$lib/remote.svelte";
+	let { characters }: { characters: CharacterData[] } = $props();
 </script>
 
 <div class="char-list-container main-content">
 	{#each characters as character}
 		<div class="char-list-div" transition:slide>
 			<div class="avatar" style="background-image: url('{character.avatarImg}')"></div>
-			<div class="char-data"><TermNameIcon height="0.8em" width="0.8em" /> {character.name}</div>
-			<div class="char-data"><ShieldIcon height="0.8em" width="0.8em" /> {character.class}</div>
-			<div class="char-data"><PersonIcon height="0.8em" width="0.8em" /> {character.race}</div>
 			<div class="char-data">
-				<StatsIcon height="0.8em" width="0.8em" /> Level {character.level}
+				<TermNameIcon width="20px" height="20px" viewBox="0 -2 24 24" />
+				{character.name}
+			</div>
+			<div class="char-data">
+				<ShieldIcon width="20px" height="20px" viewBox="0 -2 24 24" />
+				{character.class}
+			</div>
+			<div class="char-data">
+				<PersonIcon width="20px" height="20px" viewBox="0 -2 24 24" />
+				{character.race}
+				<div class="char-link"><a href="/characters/{character.id}?view">View</a></div>
+			</div>
+			<div class="char-data">
+				<StatsIcon width="20px" height="20px" viewBox="0 -2 24 24" /> Level {character.level}
+				<div class="char-link"><a href="/characters/{character.id}?edit">Edit</a></div>
 			</div>
 		</div>
 	{/each}
@@ -52,6 +64,32 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+
+	.char-list-container .char-link {
+		float: right;
+	}
+
+	.char-list-container a {
+		color: var(--char-link-colour);
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+		transition: 0.3s;
+	}
+
+	.char-list-container a:after {
+		content: "";
+		transition: 0.3s;
+		background-color: var(--char-link-colour);
+		width: 0%;
+		height: 2px;
+		transition: 0.3s;
+	}
+
+	.char-list-container a:hover:after {
+		width: 100%;
+		transition: 0.3s;
 	}
 
 	@media (max-width: 530px) {
