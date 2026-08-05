@@ -87,7 +87,8 @@
 		transition: 0.3s;
 	}
 
-	.char-list-container a:hover:after {
+	.char-list-container a:hover:after,
+	.char-list-container a:focus-within:after {
 		width: 100%;
 		transition: 0.3s;
 	}

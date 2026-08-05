@@ -88,11 +88,11 @@
 	}
 	.show-more-btn:hover .translatable-icon-bottom,
 	.show-more-btn:focus-within .translatable-icon-bottom {
-		transform: translateY(100px);
+		transform: translateY(50px);
 	}
 	.show-more-btn:hover .translatable-icon-top,
 	.show-more-btn:focus-within .translatable-icon-top {
-		transform: translateY(-100px);
+		transform: translateY(-50px);
 	}
 	.show-more-container {
 		display: flex;
