@@ -39,7 +39,7 @@
 		<div class="error-data">
 			<h2>{errorTitle}</h2>
 			<p>{errorMessage}</p>
-			<div class="error-link"><a href={errorLink}>{errorLinkText}</a></div>
+			<div class="error-link link-underline"><a href={errorLink}>{errorLinkText}</a></div>
 		</div>
 	</div>
 </div>

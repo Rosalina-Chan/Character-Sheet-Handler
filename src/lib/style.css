@@ -8,7 +8,7 @@
 	--btn-background-colour: #27232f;
 	--btn-border-colour: #423d4d;
 
-	--char-link-colour: #3a0d94;
+	--link-colour: #3a0d94;
 }
 
 body {
@@ -27,4 +27,27 @@ h1 {
 }
 h2 {
 	margin-bottom: 20px;
+}
+
+.link-underline a {
+	color: var(--link-colour);
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	transition: 0.3s;
+}
+
+.link-underline a:after {
+	content: "";
+	transition: 0.3s;
+	background-color: var(--link-colour);
+	width: 0%;
+	height: 2px;
+	transition: 0.3s;
+}
+
+.link-underline a:hover:after,
+.link-underline a:focus-within:after {
+	width: 100%;
+	transition: 0.3s;
 }

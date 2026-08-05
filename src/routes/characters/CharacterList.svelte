@@ -23,11 +23,15 @@
 			<div class="char-data">
 				<PersonIcon width="20px" height="20px" viewBox="0 -2 24 24" />
 				{character.race}
-				<div class="char-link"><a href="/characters/{character.id}?view">View</a></div>
+				<div class="char-link link-underline">
+					<a href="/characters/{character.id}?view">View</a>
+				</div>
 			</div>
 			<div class="char-data">
 				<StatsIcon width="20px" height="20px" viewBox="0 -2 24 24" /> Level {character.level}
-				<div class="char-link"><a href="/characters/{character.id}?edit">Edit</a></div>
+				<div class="char-link link-underline">
+					<a href="/characters/{character.id}?edit">Edit</a>
+				</div>
 			</div>
 		</div>
 	{/each}
@@ -68,29 +72,6 @@
 
 	.char-list-container .char-link {
 		float: right;
-	}
-
-	.char-list-container a {
-		color: var(--char-link-colour);
-		display: flex;
-		flex-direction: column;
-		width: fit-content;
-		transition: 0.3s;
-	}
-
-	.char-list-container a:after {
-		content: "";
-		transition: 0.3s;
-		background-color: var(--char-link-colour);
-		width: 0%;
-		height: 2px;
-		transition: 0.3s;
-	}
-
-	.char-list-container a:hover:after,
-	.char-list-container a:focus-within:after {
-		width: 100%;
-		transition: 0.3s;
 	}
 
 	@media (max-width: 530px) {
