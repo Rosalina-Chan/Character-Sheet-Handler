@@ -9,6 +9,27 @@
 	--btn-border-colour: #423d4d;
 
 	--link-colour: #3a0d94;
+
+	--box-background-colour: #f1f1f1;
+	--box-background-icon: white;
+
+	--highlighted-text-colour: #3a0d94;
+
+	--normal-light-background-colour: #ffffff;
+	--normal-background-colour: #f1f1f1;
+	--normal-dark-background-colour: #dbdbdb;
+	--normal-background-icon: white;
+
+	--parchment-light-background-colour: #f6f3ed;
+	--parchment-background-colour: #e7dfd0;
+	--parchment-dark-background-colour: #d8cbb1;
+	--parchment-background-icon: white;
+
+	--dark-light-background-colour: #3e354e;
+	--dark-background-colour: #27232f;
+	--dark-dark-background-colour: #0c0b0f;
+	--dark-background-icon: #4e455e;
+	--dark-text-colour: #ccc4ce;
 }
 
 body {

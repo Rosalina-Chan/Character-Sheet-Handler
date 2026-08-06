@@ -8,11 +8,121 @@
 	let render = [
 		{ widget: "name" },
 		{
-			widget: "row",
+			widget: "box",
 			children: [
-				{ widget: "attribute", attribute: "wis" },
-				{ widget: "attribute", attribute: "dex" },
-				{ widget: "attribute", attribute: "str" }
+				{
+					widget: "row",
+					gap: "50px",
+					padding: "45px",
+					justify: "center",
+					children: [
+						{
+							widget: "box",
+							colour: "normal",
+							borderRadius: "10px",
+							children: [
+								{
+									widget: "column",
+									gap: "10px",
+									padding: "45px",
+									children: [
+										{
+											widget: "box",
+											colour: "normalLight",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "wis" }]
+										},
+										{
+											widget: "box",
+											colour: "normalDark",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "dex" }]
+										},
+										{
+											widget: "box",
+											colour: "normalIcon",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "str" }]
+										}
+									]
+								}
+							]
+						},
+						{
+							widget: "box",
+							colour: "parchment",
+							borderRadius: "10px",
+							children: [
+								{
+									widget: "column",
+									gap: "10px",
+									padding: "45px",
+									children: [
+										{
+											widget: "box",
+											colour: "parchmentLight",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "wis" }]
+										},
+										{
+											widget: "box",
+											colour: "parchmentDark",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "dex" }]
+										},
+										{
+											widget: "box",
+											colour: "parchmentIcon",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "str" }]
+										}
+									]
+								}
+							]
+						},
+						{
+							widget: "box",
+							colour: "dark",
+							borderRadius: "10px",
+							children: [
+								{
+									widget: "column",
+									gap: "10px",
+									padding: "45px",
+									children: [
+										{
+											widget: "box",
+											colour: "darkLight",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "wis" }]
+										},
+										{
+											widget: "box",
+											colour: "darkDark",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "dex" }]
+										},
+										{
+											widget: "box",
+											colour: "darkIcon",
+											borderRadius: "5px",
+											padding: "15px",
+											children: [{ widget: "attribute", attribute: "str" }]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
 			]
 		}
 	];
@@ -28,7 +138,6 @@
 		severeness="0"
 	/>
 {:else}
-	{character.name}
 	<Widgets widgetsToRender={render} {character} />
 {/if}
 

@@ -58,7 +58,7 @@
 
 		padding: 20px;
 		width: 400px;
-		background-color: #f1f1f1;
+		background-color: var(--box-background-colour);
 		padding: 20px;
 		font-size: 25px;
 		overflow: hidden;
@@ -87,7 +87,7 @@
 		width: 90px;
 		height: 90px;
 
-		background-color: white;
+		background-color: var(--box-background-icon);
 		border-radius: 100%;
 	}
 
