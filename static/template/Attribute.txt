@@ -1,0 +1,60 @@
+[
+				{
+					widget: "boxColumn",
+					colour: "normalLight",
+					borderWidth: "2px",
+					borderColour: "dark",
+					borderStyle: "solid",
+					borderRadius: "8px",
+					width: "6em",
+					align: "center",
+					gap: "5px",
+					children: [
+						{
+							widget: "box",
+							borderRadius: "5px",
+							padding: "5px",
+							children: [
+								{
+									widget: "text",
+									textSize: "15px",
+									content: "Wisdom"
+								}
+							]
+						},
+						{
+							widget: "box",
+							colour: "normalLight",
+							borderRadius: "0px",
+							padding: "5px",
+							children: [
+								{
+									widget: "attribute",
+									textSize: "25px",
+									attributeLocation: "attributes",
+									attribute: "wis"
+								}
+							]
+						},
+						{
+							widget: "boxColumn",
+							colour: "normalLight",
+							borderRadius: "100%",
+							borderColour: "dark",
+							borderStyle: "solid",
+							borderWidth: "2px",
+							width: "3em",
+							padding: "5px",
+							align: "center",
+							children: [
+								{
+									widget: "attribute",
+									textSize: "15px",
+									attributeLocation: "modifiers",
+									attribute: "wis"
+								}
+							]
+						}
+					]
+				}
+			]

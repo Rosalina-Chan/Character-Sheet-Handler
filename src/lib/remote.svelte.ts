@@ -32,8 +32,8 @@ let data = $state<RemoteData>({
 			race: "Half-Elf",
 			level: 3,
 
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 
 			lastAccessed: 0,
 			items: [0],
@@ -47,8 +47,8 @@ let data = $state<RemoteData>({
 			class: "Druid",
 			race: "Dark Elf",
 			level: 5,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 1,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face 2.png"
@@ -61,8 +61,8 @@ let data = $state<RemoteData>({
 			class: "Warrior",
 			race: "Human",
 			level: 8,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 3,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face.png"
@@ -75,8 +75,8 @@ let data = $state<RemoteData>({
 			class: "Barbarian",
 			race: "Dwarf",
 			level: 12,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 5,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face 2.png"
@@ -89,8 +89,8 @@ let data = $state<RemoteData>({
 			class: "Warlock",
 			race: "Tiefling",
 			level: 17,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 1,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face.png"
@@ -103,8 +103,8 @@ let data = $state<RemoteData>({
 			class: "Druid",
 			race: "Dark Elf",
 			level: 5,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 4,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face 2.png"
@@ -117,8 +117,8 @@ let data = $state<RemoteData>({
 			class: "Warrior",
 			race: "Human",
 			level: 8,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 6,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face.png"
@@ -131,8 +131,8 @@ let data = $state<RemoteData>({
 			class: "Barbarian",
 			race: "Dwarf",
 			level: 12,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 1,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face 2.png"
@@ -145,8 +145,8 @@ let data = $state<RemoteData>({
 			class: "Warlock",
 			race: "Tiefling",
 			level: 17,
-			attributes: { dex: 18, wis: 12, str: 8 },
-			modifiers: { dex: "+4", wis: "+1", str: "-1" },
+			attributes: { dex: 14, wis: 12, str: 8, con: 7, int: 13, cha: 18 },
+			modifiers: { dex: "+2", wis: "+1", str: "-1", con: "-2", int: "+1", cha: "+4" },
 			lastAccessed: 2,
 			items: [0],
 			avatarImg: "/images/user-images/Cute Face.png"

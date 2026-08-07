@@ -8,12 +8,12 @@
 
 {#each widgetsToRender as widget}
 	{#if widget.widget === "name"}
-		<h1>{character.name}</h1>
+		<p>{character.name}</p>
+	{:else if widget.widget === "text"}
+		<p style="font-size: {widget.textSize};">{widget.content}</p>
 	{:else if widget.widget === "attribute"}
-		<div>
-			<div>{widget.attribute}</div>
-			<div>{character.attributes[widget.attribute]}</div>
-			<div>{character.modifiers[widget.attribute]}</div>
+		<div style="font-size: {widget.textSize};">
+			{character[widget.attributeLocation as "attributes" | "modifiers"][widget.attribute]}
 		</div>
 	{:else if widget.widget === "row"}
 		<div
@@ -23,13 +23,13 @@
 		</div>
 	{:else if widget.widget === "column"}
 		<div
-			style="display: flex; flex-direction: column; padding: {widget.padding}; gap: {widget.gap}; justify-content: {widget.justify};"
+			style="display: flex; flex-direction: column; gap: {widget.gap}; justify-content: {widget.justify}; align-items: {widget.align}"
 		>
 			<Widgets widgetsToRender={widget.children} {character} />
 		</div>
 	{:else if widget.widget === "box"}
 		<div
-			style="border-radius: {widget.borderRadius}; padding: {widget.padding};"
+			style="border-radius: {widget.borderRadius}; border-style: {widget.borderStyle}; border-width: {widget.borderWidth}; padding: {widget.padding}; margin: {widget.margin}; width: {widget.width}; height: {widget.height};"
 			class:normal={widget.colour === "normal"}
 			class:normal-light={widget.colour === "normalLight"}
 			class:normal-dark={widget.colour === "normalDark"}
@@ -44,8 +44,40 @@
 			class:dark-light={widget.colour === "darkLight"}
 			class:dark-dark={widget.colour === "darkDark"}
 			class:dark-icon={widget.colour === "darkIcon"}
+			//
+			class:border-colour={widget.borderColour === "normal"}
+			class:border-colour-parchment={widget.borderColour === "parchment"}
+			class:border-colour-dark={widget.borderColour === "dark"}
 		>
 			<Widgets widgetsToRender={widget.children} {character} />
+		</div>
+	{:else if widget.widget === "boxColumn"}
+		<div
+			style="border-radius: {widget.borderRadius}; border-style: {widget.borderStyle}; border-width: {widget.borderWidth}; padding: {widget.padding}; margin: {widget.margin}; width: {widget.width}; height: {widget.height};"
+			class:normal={widget.colour === "normal"}
+			class:normal-light={widget.colour === "normalLight"}
+			class:normal-dark={widget.colour === "normalDark"}
+			class:normal-icon={widget.colour === "normalIcon"}
+			//
+			class:parchment={widget.colour === "parchment"}
+			class:parchment-light={widget.colour === "parchmentLight"}
+			class:parchment-dark={widget.colour === "parchmentDark"}
+			class:parchment-icon={widget.colour === "parchmentIcon"}
+			//
+			class:dark={widget.colour === "dark"}
+			class:dark-light={widget.colour === "darkLight"}
+			class:dark-dark={widget.colour === "darkDark"}
+			class:dark-icon={widget.colour === "darkIcon"}
+			//
+			class:border-colour={widget.borderColour === "normal"}
+			class:border-colour-parchment={widget.borderColour === "parchment"}
+			class:border-colour-dark={widget.borderColour === "dark"}
+		>
+			<div
+				style="display: flex; flex-direction: column; gap: {widget.gap}; justify-content: {widget.justify}; align-items: {widget.align}"
+			>
+				<Widgets widgetsToRender={widget.children} {character} />
+			</div>
 		</div>
 	{/if}
 {/each}
@@ -104,5 +136,18 @@
 		background-color: var(--dark-background-icon);
 		width: fit-content;
 		color: var(--dark-text-colour);
+	}
+
+	.border-colour {
+		width: fit-content;
+		border-color: var(--normal-dark-background-colour);
+	}
+	.border-colour-parchment {
+		width: fit-content;
+		border-color: var(--parchment-dark-background-colour);
+	}
+	.border-colour-dark {
+		width: fit-content;
+		border-color: var(--dark-dark-background-colour);
 	}
 </style>
