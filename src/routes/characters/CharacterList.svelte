@@ -10,8 +10,11 @@
 
 <div class="char-list-container main-content">
 	{#each characters as character}
-		<div class="char-list-div" transition:slide>
-			<div class="avatar" style="background-image: url('{character.avatarImg}')"></div>
+		<div class="char-list-div normal-div" transition:slide>
+			<div
+				class="avatar normal-avatar"
+				style="background-image: url('{character.avatarImg}')"
+			></div>
 			<div class="char-data">
 				<TermNameIcon width="20px" height="20px" viewBox="0 -2 24 24" />
 				{character.name}
@@ -38,6 +41,22 @@
 </div>
 
 <style>
+	.normal-div {
+		background-color: var(--normal-background-colour);
+		/*color: var(--dark-text-colour);*/
+	}
+
+	/*.normal-div a {
+		color: var(--link-light-colour);
+	}
+	.normal-div a:after {
+		background-color: var(--link-light-colour);
+	}*/
+
+	.normal-avatar {
+		background-color: var(--normal-background-icon);
+	}
+
 	.char-list-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -51,14 +70,12 @@
 		background-position: center;
 		background-size: cover;
 		margin-bottom: 10px;
-		background-color: var(--normal-background-icon);
 	}
 
 	.char-list-container .char-list-div {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		background-color: var(--normal-background-colour);
 		padding: 20px;
 		font-size: 25px;
 		border-radius: 5%;
