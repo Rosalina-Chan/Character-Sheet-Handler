@@ -4,6 +4,7 @@ export interface RemoteData {
 	characters: Record<number, CharacterData>;
 }
 export interface CharacterData {
+	style: string;
 	name: string;
 	id: number;
 	owner: number;
@@ -24,6 +25,7 @@ let data = $state<RemoteData>({
 	items: { 0: { name: "Shortsword", dmg: 4 }, 1: { name: "Spear", dmg: 6 } },
 	characters: {
 		0: {
+			style: "normal",
 			name: "A",
 			id: 0,
 			owner: 0,
@@ -40,6 +42,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png"
 		},
 		1: {
+			style: "normal",
 			name: "B",
 			id: 1,
 			owner: 1,
@@ -54,6 +57,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face 2.png"
 		},
 		2: {
+			style: "normal",
 			name: "C",
 			id: 2,
 			owner: 1,
@@ -68,6 +72,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png"
 		},
 		3: {
+			style: "normal",
 			name: "D",
 			id: 3,
 			owner: 0,
@@ -82,6 +87,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face 2.png"
 		},
 		4: {
+			style: "normal",
 			name: "Eladriel The Second Coming of VERYVERYVERYVERYLONGNAME :3",
 			id: 4,
 			owner: 0,
@@ -96,6 +102,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png"
 		},
 		5: {
+			style: "normal",
 			name: "F",
 			id: 5,
 			owner: 0,
@@ -110,6 +117,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face 2.png"
 		},
 		6: {
+			style: "normal",
 			name: "G",
 			id: 6,
 			owner: 0,
@@ -124,6 +132,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png"
 		},
 		7: {
+			style: "normal",
 			name: "H",
 			id: 7,
 			owner: 0,
@@ -138,6 +147,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face 2.png"
 		},
 		8: {
+			style: "normal",
 			name: "I",
 			id: 8,
 			owner: 1,

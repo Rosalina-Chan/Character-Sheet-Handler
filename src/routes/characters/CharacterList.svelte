@@ -51,13 +51,14 @@
 		background-position: center;
 		background-size: cover;
 		margin-bottom: 10px;
+		background-color: var(--normal-background-icon);
 	}
 
 	.char-list-container .char-list-div {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		background-color: #f1f1f1;
+		background-color: var(--normal-background-colour);
 		padding: 20px;
 		font-size: 25px;
 		border-radius: 5%;
