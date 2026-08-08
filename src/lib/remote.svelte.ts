@@ -34,10 +34,10 @@ let data = $state<RemoteData>({
 			level: 3,
 
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -56,10 +56,10 @@ let data = $state<RemoteData>({
 			race: "Dark Elf",
 			level: 5,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -77,10 +77,10 @@ let data = $state<RemoteData>({
 			race: "Human",
 			level: 8,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -98,10 +98,10 @@ let data = $state<RemoteData>({
 			race: "Dwarf",
 			level: 12,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -119,10 +119,10 @@ let data = $state<RemoteData>({
 			race: "Tiefling",
 			level: 17,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -140,10 +140,10 @@ let data = $state<RemoteData>({
 			race: "Dark Elf",
 			level: 5,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -161,10 +161,10 @@ let data = $state<RemoteData>({
 			race: "Human",
 			level: 8,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -182,10 +182,10 @@ let data = $state<RemoteData>({
 			race: "Dwarf",
 			level: 12,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
@@ -203,10 +203,10 @@ let data = $state<RemoteData>({
 			race: "Tiefling",
 			level: 17,
 			attributes: [
-				{ name: "Dexterity", base: 14, modifier: "+2" },
-				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Strength", base: 8, modifier: "-1" },
+				{ name: "Dexterity", base: 14, modifier: "+2" },
 				{ name: "Constitution", base: 7, modifier: "-2" },
+				{ name: "Intelligence", base: 12, modifier: "+1" },
 				{ name: "Wisdom", base: 13, modifier: "+1" },
 				{ name: "Charisma", base: 18, modifier: "+4" }
 			],
