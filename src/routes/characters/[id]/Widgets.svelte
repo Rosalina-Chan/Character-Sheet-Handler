@@ -14,10 +14,10 @@
 			{widget.path.reduce((acc: any, key: string) => acc[key], context)}
 		</div>
 	{:else if widget.widget === "loop"}
-		{#each widget.items as item}
+		{#each widget.path.reduce((acc: any, key: string) => acc[key], context) as iteration}
 			<Widgets
 				widgetsToRender={widget.children}
-				context={{ ...context, [widget.variable]: item }}
+				context={{ ...context, [widget.variable]: iteration }}
 			/>
 		{/each}
 	{:else if widget.widget === "box"}
