@@ -3,33 +3,44 @@
 	import "$lib/style.css";
 	import Widgets from "./Widgets.svelte";
 	import type { CharacterData } from "$lib/remote.svelte";
-	let { widgetsToRender, character }: { character: CharacterData; widgetsToRender: any } = $props();
+	let { widgetsToRender, context }: { context: any; widgetsToRender: any } = $props();
 </script>
 
 {#each widgetsToRender as widget}
-	{#if widget.widget === "name"}
-		<p>{character.name}</p>
-	{:else if widget.widget === "text"}
+	{#if widget.widget === "text"}
 		<p style="font-size: {widget.textSize};">{widget.content}</p>
-	{:else if widget.widget === "attribute"}
+	{:else if widget.widget === "value"}
 		<div style="font-size: {widget.textSize};">
-			{character[widget.attributeLocation as "attributes" | "modifiers"][widget.attribute]}
+			{widget.path.reduce((acc: any, key: string) => acc[key], context)}
 		</div>
-	{:else if widget.widget === "row"}
-		<div
-			style="display: flex; padding: {widget.padding}; gap: {widget.gap}; justify-content: {widget.justify};"
-		>
-			<Widgets widgetsToRender={widget.children} {character} />
-		</div>
-	{:else if widget.widget === "column"}
-		<div
-			style="display: flex; flex-direction: column; gap: {widget.gap}; justify-content: {widget.justify}; align-items: {widget.align}"
-		>
-			<Widgets widgetsToRender={widget.children} {character} />
-		</div>
+	{:else if widget.widget === "loop"}
+		{#each widget.items as item}
+			<Widgets
+				widgetsToRender={widget.children}
+				context={{ ...context, [widget.variable]: item }}
+			/>
+		{/each}
 	{:else if widget.widget === "box"}
 		<div
-			style="border-radius: {widget.borderRadius}; border-style: {widget.borderStyle}; border-width: {widget.borderWidth}; padding: {widget.padding}; margin: {widget.margin}; width: {widget.width}; height: {widget.height};"
+			style="
+
+			/*Border and Box Handling*/
+
+			border-radius: {widget.borderRadius};
+			border-style: {widget.borderStyle}; 
+			border-width: {widget.borderWidth}; 
+			padding: {widget.padding}; 
+			margin: {widget.margin}; 
+			width: {widget.width}; 
+			height: {widget.height};
+
+			/*Column and Row Handling*/ 
+
+			display: flex; 
+			flex-direction: {widget.flexDirection}; 
+			gap: {widget.gap}; 
+			justify-content: {widget.justify}; 
+			align-items: {widget.align}"
 			class:normal={widget.colour === "normal"}
 			class:normal-light={widget.colour === "normalLight"}
 			class:normal-dark={widget.colour === "normalDark"}
@@ -49,35 +60,7 @@
 			class:border-colour-parchment={widget.borderColour === "parchment"}
 			class:border-colour-dark={widget.borderColour === "dark"}
 		>
-			<Widgets widgetsToRender={widget.children} {character} />
-		</div>
-	{:else if widget.widget === "boxColumn"}
-		<div
-			style="border-radius: {widget.borderRadius}; border-style: {widget.borderStyle}; border-width: {widget.borderWidth}; padding: {widget.padding}; margin: {widget.margin}; width: {widget.width}; height: {widget.height};"
-			class:normal={widget.colour === "normal"}
-			class:normal-light={widget.colour === "normalLight"}
-			class:normal-dark={widget.colour === "normalDark"}
-			class:normal-icon={widget.colour === "normalIcon"}
-			//
-			class:parchment={widget.colour === "parchment"}
-			class:parchment-light={widget.colour === "parchmentLight"}
-			class:parchment-dark={widget.colour === "parchmentDark"}
-			class:parchment-icon={widget.colour === "parchmentIcon"}
-			//
-			class:dark={widget.colour === "dark"}
-			class:dark-light={widget.colour === "darkLight"}
-			class:dark-dark={widget.colour === "darkDark"}
-			class:dark-icon={widget.colour === "darkIcon"}
-			//
-			class:border-colour={widget.borderColour === "normal"}
-			class:border-colour-parchment={widget.borderColour === "parchment"}
-			class:border-colour-dark={widget.borderColour === "dark"}
-		>
-			<div
-				style="display: flex; flex-direction: column; gap: {widget.gap}; justify-content: {widget.justify}; align-items: {widget.align}"
-			>
-				<Widgets widgetsToRender={widget.children} {character} />
-			</div>
+			<Widgets widgetsToRender={widget.children} {context} />
 		</div>
 	{/if}
 {/each}
