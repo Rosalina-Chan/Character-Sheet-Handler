@@ -5,19 +5,15 @@ export interface RemoteData {
 }
 export interface CharacterData {
 	style: string;
-	name: string;
+	displayKeys: { data: string; icon: string }[];
 	id: number;
 	owner: number;
 	favourited: boolean;
-	class: string;
-	race: string;
-	level: number;
-
-	attributes: { name: string; base: number; modifier: string }[];
-
+	source: string;
 	lastAccessed: number;
-	items: number[];
 	avatarImg: string;
+
+	[key: string]: any;
 }
 let data = $state<RemoteData>({
 	user: 0,
@@ -25,13 +21,20 @@ let data = $state<RemoteData>({
 	characters: {
 		0: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "A",
 			id: 0,
 			owner: 0,
 			favourited: false,
 			class: "Fighter",
 			race: "Half-Elf",
-			level: 3,
+			level: "Level 3",
 
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
@@ -48,13 +51,20 @@ let data = $state<RemoteData>({
 		},
 		1: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "B",
 			id: 1,
 			owner: 1,
 			favourited: true,
 			class: "Druid",
 			race: "Dark Elf",
-			level: 5,
+			level: "Level 5",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -69,13 +79,20 @@ let data = $state<RemoteData>({
 		},
 		2: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "C",
 			id: 2,
 			owner: 1,
 			favourited: false,
 			class: "Warrior",
 			race: "Human",
-			level: 8,
+			level: "Level 8",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -90,13 +107,20 @@ let data = $state<RemoteData>({
 		},
 		3: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "D",
 			id: 3,
 			owner: 0,
 			favourited: false,
 			class: "Barbarian",
 			race: "Dwarf",
-			level: 12,
+			level: "Level 12",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -111,13 +135,20 @@ let data = $state<RemoteData>({
 		},
 		4: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "Eladriel The Second Coming of VERYVERYVERYVERYLONGNAME :3",
 			id: 4,
 			owner: 0,
 			favourited: true,
 			class: "Warlock",
 			race: "Tiefling",
-			level: 17,
+			level: "Level 17",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -132,13 +163,20 @@ let data = $state<RemoteData>({
 		},
 		5: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "F",
 			id: 5,
 			owner: 0,
 			favourited: false,
 			class: "Druid",
 			race: "Dark Elf",
-			level: 5,
+			level: "Level 5",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -153,13 +191,20 @@ let data = $state<RemoteData>({
 		},
 		6: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "G",
 			id: 6,
 			owner: 0,
 			favourited: false,
 			class: "Warrior",
 			race: "Human",
-			level: 8,
+			level: "Level 8",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -174,13 +219,20 @@ let data = $state<RemoteData>({
 		},
 		7: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "H",
 			id: 7,
 			owner: 0,
 			favourited: false,
 			class: "Barbarian",
 			race: "Dwarf",
-			level: 12,
+			level: "Level 12",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },
@@ -195,13 +247,20 @@ let data = $state<RemoteData>({
 		},
 		8: {
 			style: "normal",
+			displayKeys: [
+				{ data: "name", icon: "nameTag" },
+				{ data: "class", icon: "shield" },
+				{ data: "race", icon: "person" },
+				{ data: "level", icon: "stats" }
+			],
+			source: "D&D 5e",
 			name: "I",
 			id: 8,
 			owner: 1,
 			favourited: false,
 			class: "Warlock",
 			race: "Tiefling",
-			level: 17,
+			level: "Level 17",
 			attributes: [
 				{ name: "Strength", base: 8, modifier: "-1" },
 				{ name: "Dexterity", base: 14, modifier: "+2" },

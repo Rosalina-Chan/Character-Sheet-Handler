@@ -1,10 +1,7 @@
 <script lang="ts">
 	import { slide } from "svelte/transition";
-	import TermNameIcon from "~icons/wordpress/term-name";
-	import StatsIcon from "~icons/gridicons/stats";
-	import ShieldIcon from "~icons/material-symbols/shield";
-	import PersonIcon from "~icons/material-symbols/person";
 	import type { CharacterData } from "$lib/remote.svelte";
+	import IconSwitch from "./IconSwitch.svelte";
 	let { characters }: { characters: CharacterData[] } = $props();
 </script>
 
@@ -15,23 +12,41 @@
 				class="avatar normal-avatar"
 				style="background-image: url('{character.avatarImg}')"
 			></div>
-			<div class="char-data">
-				<TermNameIcon width="20px" height="20px" viewBox="0 -2 24 24" />
-				{character.name}
-			</div>
-			<div class="char-data">
-				<ShieldIcon width="20px" height="20px" viewBox="0 -2 24 24" />
-				{character.class}
-			</div>
-			<div class="char-data">
-				<PersonIcon width="20px" height="20px" viewBox="0 -2 24 24" />
-				{character.race}
-				<div class="char-link link-underline">
-					<a href="/characters/{character.id}?view">View</a>
+			{#if character.displayKeys.length === 0}
+				<div class="char-data">
+					<div class="char-link link-underline">
+						<a href="/characters/{character.id}?view">View</a>
+					</div>
 				</div>
-			</div>
+			{:else if character.displayKeys.length === 1}
+				<div class="char-data">
+					<IconSwitch name={character.displayKeys[0].icon} />
+					{character[character.displayKeys[0].data]}
+					<div class="char-link link-underline">
+						<a href="/characters/{character.id}?view">View</a>
+					</div>
+				</div>
+			{:else}
+				{#each character.displayKeys as { data, icon }, i}
+					{#if character.displayKeys.length - i === 1}
+						<div class="char-data">
+							<IconSwitch name={icon} />
+							{character[data]}
+							<div class="char-link link-underline">
+								<a href="/characters/{character.id}?view">View</a>
+							</div>
+						</div>
+					{:else}
+						<div class="char-data">
+							<IconSwitch name={icon} />
+							{character[data]}
+						</div>
+					{/if}
+				{/each}
+			{/if}
 			<div class="char-data">
-				<StatsIcon width="20px" height="20px" viewBox="0 -2 24 24" /> Level {character.level}
+				<IconSwitch name={"source"} />
+				{character.source}
 				<div class="char-link link-underline">
 					<a href="/characters/{character.id}?edit">Edit</a>
 				</div>
