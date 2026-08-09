@@ -4,13 +4,13 @@ export interface RemoteData {
 	characters: Record<number, CharacterData>;
 }
 export interface CharacterData {
-	style: string;
-	displayKeys: { data: string; icon: string }[];
 	id: number;
 	owner: number;
-	favourited: boolean;
-	source: string;
 	lastAccessed: number;
+	favourited: boolean;
+	style: string;
+	displayKeys: { data: string; icon: string }[];
+	source: string;
 	avatarImg: string;
 
 	[key: string]: any;
@@ -106,7 +106,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png"
 		},
 		3: {
-			style: "normal",
+			style: "parchment",
 			displayKeys: [
 				{ data: "name", icon: "nameTag" },
 				{ data: "class", icon: "shield" },
@@ -162,7 +162,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png"
 		},
 		5: {
-			style: "normal",
+			style: "dark",
 			displayKeys: [
 				{ data: "name", icon: "nameTag" },
 				{ data: "class", icon: "shield" },

@@ -1,6 +1,6 @@
 export const sheet = [
 	{
-		// Attributes
+		// Main container for the attributes
 		widget: "box",
 		colour: "normalDark",
 		flexDirection: "column",
@@ -10,12 +10,13 @@ export const sheet = [
 		gap: "5px",
 		children: [
 			{
+				// Loops through all attributes (6) and creates appropriate slots for them
 				widget: "loop",
 				variable: "attribute",
 				path: ["character", "attributes"],
 				children: [
 					{
-						// All the Attributes
+						// Outer Attribute Box
 						widget: "box",
 						colour: "normalLight",
 						flexDirection: "column",
@@ -28,6 +29,7 @@ export const sheet = [
 						gap: "5px",
 						children: [
 							{
+								// Attribute Name
 								widget: "box",
 								borderRadius: "5px",
 								padding: "5px",
@@ -40,6 +42,7 @@ export const sheet = [
 								]
 							},
 							{
+								// Attribute Base
 								widget: "box",
 								colour: "normalLight",
 								borderRadius: "0px",
@@ -53,6 +56,7 @@ export const sheet = [
 								]
 							},
 							{
+								// Attribute Modifier
 								widget: "box",
 								colour: "normalLight",
 								flexDirection: "column",
@@ -71,10 +75,10 @@ export const sheet = [
 									}
 								]
 							}
-						]
+						] // End of Children
 					}
-				]
-			} // End of Attributes
-		]
+				] // End of Outer Box
+			}
+		] // End of Attributes
 	}
 ];
