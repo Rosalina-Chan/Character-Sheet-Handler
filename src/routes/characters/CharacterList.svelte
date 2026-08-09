@@ -7,9 +7,18 @@
 
 <div class="char-list-container main-content">
 	{#each characters as character}
-		<div class="char-list-div normal-div" transition:slide>
+		<div
+			class="char-list-div"
+			class:normal-div={character.style === "normal" || character.style === ""}
+			class:dark-div={character.style === "dark"}
+			class:parchment-div={character.style === "parchment"}
+			transition:slide
+		>
 			<div
-				class="avatar normal-avatar"
+				class="avatar"
+				class:normal-avatar={character.style === "normal" || character.style === ""}
+				class:dark-avatar={character.style === "dark"}
+				class:parchment-avatar={character.style === "parchment"}
 				style="background-image: url('{character.avatarImg}')"
 			></div>
 			{#if character.displayKeys.length === 0}
@@ -58,18 +67,34 @@
 <style>
 	.normal-div {
 		background-color: var(--normal-background-colour);
-		/*color: var(--dark-text-colour);*/
 	}
-
-	/*.normal-div a {
-		color: var(--link-light-colour);
-	}
-	.normal-div a:after {
-		background-color: var(--link-light-colour);
-	}*/
 
 	.normal-avatar {
 		background-color: var(--normal-background-icon);
+	}
+
+	.dark-div {
+		background-color: var(--dark-background-colour);
+		color: var(--dark-text-colour);
+	}
+
+	.dark-div a {
+		color: var(--link-light-colour);
+	}
+	.dark-div a:after {
+		background-color: var(--link-light-colour);
+	}
+
+	.dark-avatar {
+		background-color: var(--dark-background-icon);
+	}
+
+	.parchment-div {
+		background-color: var(--parchment-background-colour);
+	}
+
+	.parchment-avatar {
+		background-color: var(--parchment-background-icon);
 	}
 
 	.char-list-container {
