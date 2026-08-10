@@ -51,7 +51,6 @@
 		margin-left: auto;
 		display: none;
 	}
-
 	@media (max-width: 530px) {
 		.links {
 			display: flex;

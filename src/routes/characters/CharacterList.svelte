@@ -36,16 +36,32 @@
 					</div>
 				</div>
 			{:else}
+				{let offset = character.displayKeys.length > 7 ? character.displayKeys.length - 8 : 0}
 				{#each character.displayKeys as { data, icon }, i}
-					{#if character.displayKeys.length - i === 1}
-						<div class="char-data">
-							<IconSwitch name={icon} />
-							{character[data]}
-							<div class="char-link link-underline">
-								<a href="/characters/{character.id}?view">View</a>
+					{#if character.displayKeys.length - i === 1 && character.displayKeys.length - i < 8}
+						{#if character.displayKeys.length - offset - 8 === 0}
+							<div class="char-data">
+								<IconSwitch name={icon} />
+								{character[data]}
+								<div class="char-link link-underline">
+									<a href="/characters/{character.id}?view">View</a>
+								</div>
 							</div>
-						</div>
-					{:else}
+						{:else}
+							<div class="char-data">
+								<IconSwitch name={icon} />
+								{character[data]}
+							</div>
+							{#each { length: 5 - i } as j}
+								<div class="char-data" style="height: 1.15em;"></div>
+							{/each}
+							<div class="char-data">
+								<div class="char-link link-underline">
+									<a href="/characters/{character.id}?view">View</a>
+								</div>
+							</div>
+						{/if}
+					{:else if character.displayKeys.length - i < 8}
 						<div class="char-data">
 							<IconSwitch name={icon} />
 							{character[data]}
@@ -118,8 +134,9 @@
 		gap: 10px;
 		padding: 20px;
 		font-size: 25px;
-		border-radius: 5%;
+		border-radius: 50px;
 		overflow: hidden;
+		height: 28.5em;
 	}
 
 	.char-list-container .char-data {
@@ -132,13 +149,23 @@
 		float: right;
 	}
 
+	@media (max-width: 800px) {
+		.char-list-container > div {
+			padding: 10px;
+		}
+		.char-list-container .char-list-div {
+			height: 25em;
+		}
+	}
 	@media (max-width: 530px) {
 		.char-list-container {
 			grid-template-columns: 1fr;
 		}
 		.char-list-container > div {
 			padding: 10px;
-			font-size: 20px;
+		}
+		.char-list-container .char-list-div {
+			height: auto;
 		}
 	}
 </style>
