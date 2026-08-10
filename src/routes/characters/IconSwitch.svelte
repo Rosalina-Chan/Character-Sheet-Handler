@@ -17,4 +17,9 @@
 	let Component = $derived(icons[name as keyof typeof icons].icon);
 </script>
 
-<Component width="20px" height="20px" viewBox={icons[name as keyof typeof icons].view}></Component>
+<Component
+	width="20px"
+	height="20px"
+	aria-hidden="true"
+	viewBox={icons[name as keyof typeof icons].view}
+></Component>

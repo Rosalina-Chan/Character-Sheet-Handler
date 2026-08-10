@@ -29,8 +29,24 @@
 			border-radius: {widget.borderRadius};
 			border-style: {widget.borderStyle}; 
 			border-width: {widget.borderWidth}; 
+
+			border-left-width: {widget.borderLeftWidth};
+			border-right-width: {widget.borderRightWidth};
+			border-top-width: {widget.borderTopWidth};
+			border-bottom-width: {widget.borderBottomWidth};
+
 			padding: {widget.padding}; 
+			padding-left: {widget.paddingLeft}; 
+			padding-right: {widget.paddingRight}; 
+			padding-top: {widget.paddingTop}; 
+			padding-bottom: {widget.paddingBottom}; 
+
 			margin: {widget.margin}; 
+			margin-left: {widget.marginLeft}; 
+			margin-right: {widget.marginRight}; 
+			margin-top: {widget.marginTop}; 
+			margin-bottom: {widget.marginBottom}; 
+
 			width: {widget.width}; 
 			height: {widget.height};
 

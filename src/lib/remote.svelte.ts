@@ -49,7 +49,7 @@ let data = $state<RemoteData>({
 			avatarImg: "/images/user-images/Cute Face.png",
 
 			// Source Specific Parameters
-			name: "A",
+			name: "Character Sheet Testing",
 			class: "Fighter",
 			race: "Half-Elf",
 			level: "Level 3",
@@ -102,14 +102,10 @@ let data = $state<RemoteData>({
 			owner: 0,
 			lastAccessed: 0,
 			favourited: true,
-			style: "dark",
+			style: "normal",
 			displayKeys: [
 				{ data: "name", icon: "nameTag" },
 				{ data: "charStyle", icon: "shield" },
-				{ data: "cozyActivity", icon: "person" },
-				{ data: "cozyActivity", icon: "person" },
-				{ data: "cozyActivity", icon: "person" },
-				{ data: "cozyActivity", icon: "person" },
 				{ data: "cozyActivity", icon: "person" },
 				{ data: "xpTrack", icon: "stats" }
 			],
