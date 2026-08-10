@@ -8,9 +8,9 @@
 
 {#each widgetsToRender as widget}
 	{#if widget.widget === "text"}
-		<p style="font-size: {widget.textSize};">{widget.content}</p>
+		<p style="font-size: {widget.textSize}px;">{widget.content}</p>
 	{:else if widget.widget === "value"}
-		<div style="font-size: {widget.textSize};">
+		<div style="font-size: {widget.textSize}px;">
 			{widget.path.reduce((acc: any, key: string) => acc[key], context)}
 		</div>
 	{:else if widget.widget === "loop"}
@@ -26,35 +26,35 @@
 
 			/*Border and Box Handling*/
 
-			border-radius: {widget.borderRadius};
+			border-radius: {widget.borderRadius}px;
 			border-style: {widget.borderStyle}; 
-			border-width: {widget.borderWidth}; 
+			border-width: {widget.borderWidth}px; 
 
-			border-left-width: {widget.borderLeftWidth};
-			border-right-width: {widget.borderRightWidth};
-			border-top-width: {widget.borderTopWidth};
-			border-bottom-width: {widget.borderBottomWidth};
+			border-left-width: {widget.borderLeftWidth}px;
+			border-right-width: {widget.borderRightWidth}px;
+			border-top-width: {widget.borderTopWidth}px;
+			border-bottom-width: {widget.borderBottomWidth}px;
 
-			padding: {widget.padding}; 
-			padding-left: {widget.paddingLeft}; 
-			padding-right: {widget.paddingRight}; 
-			padding-top: {widget.paddingTop}; 
-			padding-bottom: {widget.paddingBottom}; 
+			padding: {widget.padding}px; 
+			padding-left: {widget.paddingLeft}px; 
+			padding-right: {widget.paddingRight}px; 
+			padding-top: {widget.paddingTop}px; 
+			padding-bottom: {widget.paddingBottom}px; 
 
-			margin: {widget.margin}; 
-			margin-left: {widget.marginLeft}; 
-			margin-right: {widget.marginRight}; 
-			margin-top: {widget.marginTop}; 
-			margin-bottom: {widget.marginBottom}; 
+			margin: {widget.margin}px; 
+			margin-left: {widget.marginLeft}px; 
+			margin-right: {widget.marginRight}px; 
+			margin-top: {widget.marginTop}px; 
+			margin-bottom: {widget.marginBottom}px; 
 
-			width: {widget.width}; 
-			height: {widget.height};
+			width: {widget.width}px; 
+			height: {widget.height}px;
 
 			/*Column and Row Handling*/ 
 
 			display: flex; 
 			flex-direction: {widget.flexDirection}; 
-			gap: {widget.gap}; 
+			gap: {widget.gap}px; 
 			justify-content: {widget.justify}; 
 			align-items: {widget.align}"
 			class:normal={widget.colour === "normal"}

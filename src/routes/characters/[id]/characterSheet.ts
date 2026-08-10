@@ -14,27 +14,27 @@ export const sheet = [
 						// Name Box
 						widget: "box",
 						colour: "normalLight",
-						height: "45px",
-						width: "400px",
-						padding: "10px",
-						marginLeft: "50px",
-						marginRight: "20px",
-						marginTop: "100px",
-						marginBottom: "50px",
+						height: "45",
+						width: "400",
+						padding: "10",
+						marginLeft: "50",
+						marginRight: "20",
+						marginTop: "100",
+						marginBottom: "50",
 
 						flexDirection: "column",
 						align: "start",
 
-						borderRadius: "8px",
+						borderRadius: "8",
 						borderStyle: "solid",
 						borderColour: "dark",
-						borderWidth: "2px",
-						gap: "8px",
+						borderWidth: "2",
+						gap: "8",
 						children: [
 							{
 								// Name
 								widget: "value",
-								textSize: "25px",
+								textSize: "25",
 								path: ["character", "name"]
 							},
 							{
@@ -47,16 +47,16 @@ export const sheet = [
 						// Surrounding Box
 						widget: "box",
 						flexDirection: "row",
-						gap: "20px",
+						gap: "20",
 
 						borderStyle: "solid",
-						borderWidth: "2px",
+						borderWidth: "2",
 						borderColour: "dark",
-						borderRadius: "10px",
-						marginTop: "60px",
-						paddingBottom: "15px",
-						paddingLeft: "15px",
-						paddingRight: "15px",
+						borderRadius: "10",
+						marginTop: "60",
+						paddingBottom: "15",
+						paddingLeft: "15",
+						paddingRight: "15",
 
 						children: [
 							{
@@ -71,22 +71,22 @@ export const sheet = [
 										children: [
 											{
 												widget: "box",
-												padding: "4px",
-												marginBottom: "2px",
-												marginTop: "8px",
-												width: "200px",
+												padding: "4",
+												marginBottom: "2",
+												marginTop: "8",
+												width: "200",
 
-												borderRadius: "4px",
+												borderRadius: "4",
 												borderStyle: "solid",
 												borderColour: "normal",
-												borderWidth: "0px",
-												borderBottomWidth: "3px",
-												height: "34px",
+												borderWidth: "0",
+												borderBottomWidth: "3",
+												height: "34",
 
 												children: [
 													{
 														widget: "value",
-														textSize: "20px",
+														textSize: "20",
 														path: ["character", "class"]
 													}
 												]
@@ -104,22 +104,22 @@ export const sheet = [
 										children: [
 											{
 												widget: "box",
-												padding: "4px",
-												marginBottom: "2px",
-												marginTop: "8px",
-												width: "200px",
+												padding: "4",
+												marginBottom: "2",
+												marginTop: "8",
+												width: "200",
 
-												borderRadius: "4px",
+												borderRadius: "4",
 												borderStyle: "solid",
 												borderColour: "normal",
-												borderWidth: "0px",
-												borderBottomWidth: "3px",
-												height: "34px",
+												borderWidth: "0",
+												borderBottomWidth: "3",
+												height: "34",
 
 												children: [
 													{
 														widget: "value",
-														textSize: "20px",
+														textSize: "20",
 														path: ["character", "race"]
 													}
 												]
@@ -144,22 +144,22 @@ export const sheet = [
 										children: [
 											{
 												widget: "box",
-												padding: "4px",
-												marginBottom: "2px",
-												marginTop: "8px",
-												width: "200px",
+												padding: "4",
+												marginBottom: "2",
+												marginTop: "8",
+												width: "200",
 
-												borderRadius: "4px",
+												borderRadius: "4",
 												borderStyle: "solid",
 												borderColour: "normal",
-												borderWidth: "0px",
-												borderBottomWidth: "3px",
-												height: "34px",
+												borderWidth: "0",
+												borderBottomWidth: "3",
+												height: "34",
 
 												children: [
 													{
 														widget: "value",
-														textSize: "20px",
+														textSize: "20",
 														path: ["character", "background"]
 													}
 												]
@@ -177,22 +177,22 @@ export const sheet = [
 										children: [
 											{
 												widget: "box",
-												padding: "4px",
-												marginBottom: "2px",
-												marginTop: "8px",
-												width: "200px",
+												padding: "4",
+												marginBottom: "2",
+												marginTop: "8",
+												width: "200",
 
-												borderRadius: "4px",
+												borderRadius: "4",
 												borderStyle: "solid",
 												borderColour: "normal",
-												borderWidth: "0px",
-												borderBottomWidth: "3px",
-												height: "34px",
+												borderWidth: "0",
+												borderBottomWidth: "3",
+												height: "34",
 
 												children: [
 													{
 														widget: "value",
-														textSize: "20px",
+														textSize: "20",
 														path: ["character", "alignment"]
 													}
 												]
@@ -217,22 +217,22 @@ export const sheet = [
 										children: [
 											{
 												widget: "box",
-												padding: "4px",
-												marginBottom: "2px",
-												marginTop: "8px",
-												width: "200px",
+												padding: "4",
+												marginBottom: "2",
+												marginTop: "8",
+												width: "200",
 
-												borderRadius: "4px",
+												borderRadius: "4",
 												borderStyle: "solid",
 												borderColour: "normal",
-												borderWidth: "0px",
-												borderBottomWidth: "3px",
-												height: "34px",
+												borderWidth: "0",
+												borderBottomWidth: "3",
+												height: "34",
 
 												children: [
 													{
 														widget: "value",
-														textSize: "20px",
+														textSize: "20",
 														path: ["character", "level"]
 													}
 												]
@@ -250,22 +250,22 @@ export const sheet = [
 										children: [
 											{
 												widget: "box",
-												padding: "4px",
-												marginBottom: "2px",
-												marginTop: "8px",
-												width: "200px",
+												padding: "4",
+												marginBottom: "2",
+												marginTop: "8",
+												width: "200",
 
-												borderRadius: "4px",
+												borderRadius: "4",
 												borderStyle: "solid",
 												borderColour: "normal",
-												borderWidth: "0px",
-												borderBottomWidth: "3px",
-												height: "34px",
+												borderWidth: "0",
+												borderBottomWidth: "3",
+												height: "34",
 
 												children: [
 													{
 														widget: "value",
-														textSize: "20px",
+														textSize: "20",
 														path: ["character", "exp"]
 													}
 												]
@@ -293,10 +293,10 @@ export const sheet = [
 						widget: "box",
 						colour: "normalDark",
 						flexDirection: "column",
-						padding: "10px",
-						borderRadius: "15px",
+						padding: "10",
+						borderRadius: "15",
 						align: "center",
-						gap: "5px",
+						gap: "5",
 						children: [
 							{
 								// Loops through all attributes (6) and creates appropriate slots for them
@@ -309,23 +309,23 @@ export const sheet = [
 										widget: "box",
 										colour: "normalLight",
 										flexDirection: "column",
-										borderWidth: "2px",
+										borderWidth: "2",
 										borderColour: "dark",
 										borderStyle: "solid",
-										borderRadius: "8px",
-										width: "98px",
+										borderRadius: "8",
+										width: "98",
 										align: "center",
-										gap: "5px",
+										gap: "5",
 										children: [
 											{
 												// Attribute Name
 												widget: "box",
-												borderRadius: "5px",
-												padding: "5px",
+												borderRadius: "5",
+												padding: "5",
 												children: [
 													{
 														widget: "value",
-														textSize: "15px",
+														textSize: "15",
 														path: ["attribute", "name"]
 													}
 												]
@@ -334,12 +334,12 @@ export const sheet = [
 												// Attribute Base
 												widget: "box",
 												colour: "normalLight",
-												borderRadius: "0px",
-												padding: "5px",
+												borderRadius: "0",
+												padding: "5",
 												children: [
 													{
 														widget: "value",
-														textSize: "25px",
+														textSize: "25",
 														path: ["attribute", "base"]
 													}
 												]
@@ -349,22 +349,22 @@ export const sheet = [
 												widget: "box",
 												colour: "normalLight",
 												flexDirection: "column",
-												borderRadius: "100%",
+												borderRadius: "999",
 												borderColour: "dark",
 												borderStyle: "solid",
-												borderWidth: "2px",
-												width: "50px",
-												padding: "5px",
+												borderWidth: "2",
+												width: "50",
+												padding: "5",
 												align: "center",
 												children: [
 													{
 														widget: "value",
-														textSize: "15px",
+														textSize: "15",
 														path: ["attribute", "modifier"]
 													}
 												]
 											}
-										] // End of Children
+										]
 									}
 								] // End of Outer Box
 							}
